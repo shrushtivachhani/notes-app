@@ -23,3 +23,6 @@ Thumbs.db
 # Optional: local editor settings
 *.sublime-workspace
 *.sublime-project
+
+# Backup of nested git metadata (don't commit)
+.git-backup/
