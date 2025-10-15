@@ -111,3 +111,61 @@ button.danger { background: var(--danger); }
   .container { padding: 0 12px; }
   .notes-grid { grid-template-columns: 1fr; }
 }
+
+/* App header and layout */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, rgba(37,99,235,0.06), rgba(37,99,235,0.02));
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 18px rgba(37,99,235,0.04);
+}
+.brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent-600);
+  letter-spacing: 0.2px;
+}
+
+/* Form section card */
+.form-section {
+  background: var(--card);
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 24px rgba(15,23,42,0.04);
+}
+
+/* smaller action buttons inside cards */
+.note-actions button {
+  padding: 6px 8px;
+  font-size: 0.85rem;
+  border-radius: 8px;
+}
+
+.note-actions button.secondary { background: transparent; color: var(--accent-600); border: 1px solid #e6eefc; }
+.note-actions button.danger { background: var(--danger); color: white; }
+
+/* Empty state card */
+.empty {
+  color: var(--muted);
+  padding: 18px;
+  background: linear-gradient(180deg,#ffffff,#fbfdff);
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.04);
+}
+
+/* subtle animation for adding notes */
+.note-card {
+  will-change: transform, opacity;
+}
+.note-card.added {
+  animation: popIn 240ms ease forwards;
+}
+@keyframes popIn {
+  from { transform: scale(0.98); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

@@ -53,8 +53,8 @@ export default function NoteForm({ onSave, editingNote, onCancel }) {
       </div>
       {error && <div className="error">{error}</div>}
       <div className="actions">
-        <button type="submit" disabled={saving}>{saving ? 'Saving...' : 'Save'}</button>
-        {onCancel && <button type="button" onClick={onCancel} disabled={saving}>Cancel</button>}
+        <button type="submit" className="primary" disabled={saving}>{saving ? 'Saving...' : 'Save'}</button>
+        {onCancel && <button type="button" className="secondary" onClick={onCancel} disabled={saving}>Cancel</button>}
       </div>
     </form>
   );

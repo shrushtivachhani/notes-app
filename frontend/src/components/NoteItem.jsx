@@ -4,8 +4,8 @@ export default function NoteItem({ note, onEdit, onDelete }) {
       <div className="note-header">
         <h3>{note.title}</h3>
         <div className="note-actions">
-          <button onClick={() => onEdit(note)}>Edit</button>
-          <button onClick={() => onDelete(note._id)}>Delete</button>
+          <button className="secondary" onClick={() => onEdit(note)}>Edit</button>
+          <button className="danger" onClick={() => onDelete(note._id)}>Delete</button>
         </div>
       </div>
       <p>{note.content}</p>
