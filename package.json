@@ -1,0 +1,12 @@
+{
+  "name": "notes-app-root",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm:backend\" \"npm:frontend\"",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
